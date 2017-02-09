@@ -1,9 +1,6 @@
 package com.theironyard;
 
-import net.doughughes.testifier.exception.CannotAccessFieldException;
-import net.doughughes.testifier.exception.CannotAccessMethodException;
-import net.doughughes.testifier.exception.CannotFindFieldException;
-import net.doughughes.testifier.exception.CannotFindMethodException;
+import net.doughughes.testifier.exception.*;
 import net.doughughes.testifier.matcher.RegexMatcher;
 import net.doughughes.testifier.test.TestifierTest;
 import net.doughughes.testifier.util.Invoker;
@@ -272,7 +269,7 @@ public class SignificantDateTest extends TestifierTest{
         try {
             date = (MonthDay) Invoker.readProperty(new SignificantDate(), "NEW_YEARS_DAY");
             next = (LocalDate) Invoker.invokeStatic(SignificantDate.class, "next", date);
-        } catch (CannotFindFieldException | CannotAccessFieldException | CannotFindMethodException | CannotAccessMethodException e) {
+        } catch (CannotInvokeMethodException | CannotFindFieldException | CannotAccessFieldException | CannotFindMethodException | CannotAccessMethodException e) {
             fail(e.getMessage());
         }
 
@@ -291,7 +288,7 @@ public class SignificantDateTest extends TestifierTest{
         try {
             date = (MonthDay) Invoker.readProperty(new SignificantDate(), "NEW_YEARS_DAY");
             days = (long) Invoker.invokeStatic(SignificantDate.class, "daysTo", date);
-        } catch (CannotFindFieldException | CannotAccessFieldException | CannotFindMethodException | CannotAccessMethodException e) {
+        } catch (CannotInvokeMethodException | CannotFindFieldException | CannotAccessFieldException | CannotFindMethodException | CannotAccessMethodException e) {
             fail(e.getMessage());
         }
 
@@ -310,7 +307,7 @@ public class SignificantDateTest extends TestifierTest{
         try {
             date = (MonthDay) Invoker.readProperty(new SignificantDate(), "VALENTINES_DAY");
             next = (LocalDate) Invoker.invokeStatic(SignificantDate.class, "next", date);
-        } catch (CannotFindFieldException | CannotAccessFieldException | CannotFindMethodException | CannotAccessMethodException e) {
+        } catch (CannotInvokeMethodException | CannotFindFieldException | CannotAccessFieldException | CannotFindMethodException | CannotAccessMethodException e) {
             fail(e.getMessage());
         }
 
@@ -329,7 +326,7 @@ public class SignificantDateTest extends TestifierTest{
         try {
             date = (MonthDay) Invoker.readProperty(new SignificantDate(), "VALENTINES_DAY");
             days = (long) Invoker.invokeStatic(SignificantDate.class, "daysTo", date);
-        } catch (CannotFindFieldException | CannotAccessFieldException | CannotFindMethodException | CannotAccessMethodException e) {
+        } catch (CannotInvokeMethodException | CannotFindFieldException | CannotAccessFieldException | CannotFindMethodException | CannotAccessMethodException e) {
             fail(e.getMessage());
         }
 
@@ -350,7 +347,7 @@ public class SignificantDateTest extends TestifierTest{
         try {
             date = (MonthDay) Invoker.readProperty(new SignificantDate(), "LEAP_YEAR");
             next = (LocalDate) Invoker.invokeStatic(SignificantDate.class, "next", date);
-        } catch (CannotFindFieldException | CannotAccessFieldException | CannotFindMethodException | CannotAccessMethodException e) {
+        } catch (CannotInvokeMethodException | CannotFindFieldException | CannotAccessFieldException | CannotFindMethodException | CannotAccessMethodException e) {
             fail(e.getMessage());
         }
 
@@ -369,7 +366,7 @@ public class SignificantDateTest extends TestifierTest{
         try {
             date = (MonthDay) Invoker.readProperty(new SignificantDate(), "LEAP_YEAR");
             days = (long) Invoker.invokeStatic(SignificantDate.class, "daysTo", date);
-        } catch (CannotFindFieldException | CannotAccessFieldException | CannotFindMethodException | CannotAccessMethodException e) {
+        } catch (CannotInvokeMethodException | CannotFindFieldException | CannotAccessFieldException | CannotFindMethodException | CannotAccessMethodException e) {
             fail(e.getMessage());
         }
 
@@ -387,7 +384,7 @@ public class SignificantDateTest extends TestifierTest{
         LocalDate next = null;
         try {
             next = (LocalDate) Invoker.invokeStatic(SignificantDate.class, "next", date);
-        } catch (CannotFindMethodException | CannotAccessMethodException e) {
+        } catch (CannotInvokeMethodException | CannotFindMethodException | CannotAccessMethodException e) {
             fail(e.getMessage());
         }
 
@@ -405,7 +402,7 @@ public class SignificantDateTest extends TestifierTest{
         long days = 0;
         try {
             days = (long) Invoker.invokeStatic(SignificantDate.class, "daysTo", date);
-        } catch (CannotFindMethodException | CannotAccessMethodException e) {
+        } catch (CannotInvokeMethodException | CannotFindMethodException | CannotAccessMethodException e) {
             fail(e.getMessage());
         }
 
@@ -424,7 +421,7 @@ public class SignificantDateTest extends TestifierTest{
         LocalDate next = null;
         try {
             next = (LocalDate) Invoker.invokeStatic(SignificantDate.class, "next", tomorrow);
-        } catch (CannotFindMethodException | CannotAccessMethodException e) {
+        } catch (CannotInvokeMethodException | CannotFindMethodException | CannotAccessMethodException e) {
             fail(e.getMessage());
         }
 
@@ -442,7 +439,7 @@ public class SignificantDateTest extends TestifierTest{
         long days = 0;
         try {
             days = (long) Invoker.invokeStatic(SignificantDate.class, "daysTo", tomorrow);
-        } catch (CannotFindMethodException | CannotAccessMethodException e) {
+        } catch (CannotInvokeMethodException | CannotFindMethodException | CannotAccessMethodException e) {
             fail(e.getMessage());
         }
 
