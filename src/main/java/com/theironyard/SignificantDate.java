@@ -71,6 +71,8 @@ public class SignificantDate {
      * 1/3/2017, the next instance of New Years Day would be 1/1/2018. The next
      * occurrence of leap year would be 2/29/2014.
      *
+     * This method should be static.
+     *
      * @param date A month and day we're looking for the next occurrence of
      * @return The next occurrence of the specified date
      */

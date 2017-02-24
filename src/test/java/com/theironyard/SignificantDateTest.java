@@ -269,7 +269,7 @@ public class SignificantDateTest extends TestifierTest{
         try {
             date = (MonthDay) Invoker.readProperty(new SignificantDate(), "NEW_YEARS_DAY");
             next = (LocalDate) Invoker.invokeStatic(SignificantDate.class, "next", date);
-        } catch (CannotInvokeMethodException | CannotFindFieldException | CannotAccessFieldException | CannotFindMethodException | CannotAccessMethodException e) {
+        } catch (Throwable e) {
             fail(e.getMessage());
         }
 
@@ -288,7 +288,7 @@ public class SignificantDateTest extends TestifierTest{
         try {
             date = (MonthDay) Invoker.readProperty(new SignificantDate(), "NEW_YEARS_DAY");
             days = (long) Invoker.invokeStatic(SignificantDate.class, "daysTo", date);
-        } catch (CannotInvokeMethodException | CannotFindFieldException | CannotAccessFieldException | CannotFindMethodException | CannotAccessMethodException e) {
+        } catch (Throwable e) {
             fail(e.getMessage());
         }
 
@@ -307,7 +307,7 @@ public class SignificantDateTest extends TestifierTest{
         try {
             date = (MonthDay) Invoker.readProperty(new SignificantDate(), "VALENTINES_DAY");
             next = (LocalDate) Invoker.invokeStatic(SignificantDate.class, "next", date);
-        } catch (CannotInvokeMethodException | CannotFindFieldException | CannotAccessFieldException | CannotFindMethodException | CannotAccessMethodException e) {
+        } catch (Throwable e) {
             fail(e.getMessage());
         }
 
@@ -326,7 +326,7 @@ public class SignificantDateTest extends TestifierTest{
         try {
             date = (MonthDay) Invoker.readProperty(new SignificantDate(), "VALENTINES_DAY");
             days = (long) Invoker.invokeStatic(SignificantDate.class, "daysTo", date);
-        } catch (CannotInvokeMethodException | CannotFindFieldException | CannotAccessFieldException | CannotFindMethodException | CannotAccessMethodException e) {
+        } catch (Throwable e) {
             fail(e.getMessage());
         }
 
@@ -347,7 +347,7 @@ public class SignificantDateTest extends TestifierTest{
         try {
             date = (MonthDay) Invoker.readProperty(new SignificantDate(), "LEAP_YEAR");
             next = (LocalDate) Invoker.invokeStatic(SignificantDate.class, "next", date);
-        } catch (CannotInvokeMethodException | CannotFindFieldException | CannotAccessFieldException | CannotFindMethodException | CannotAccessMethodException e) {
+        } catch (Throwable e) {
             fail(e.getMessage());
         }
 
@@ -366,7 +366,7 @@ public class SignificantDateTest extends TestifierTest{
         try {
             date = (MonthDay) Invoker.readProperty(new SignificantDate(), "LEAP_YEAR");
             days = (long) Invoker.invokeStatic(SignificantDate.class, "daysTo", date);
-        } catch (CannotInvokeMethodException | CannotFindFieldException | CannotAccessFieldException | CannotFindMethodException | CannotAccessMethodException e) {
+        } catch (Throwable e) {
             fail(e.getMessage());
         }
 
@@ -384,7 +384,7 @@ public class SignificantDateTest extends TestifierTest{
         LocalDate next = null;
         try {
             next = (LocalDate) Invoker.invokeStatic(SignificantDate.class, "next", date);
-        } catch (CannotInvokeMethodException | CannotFindMethodException | CannotAccessMethodException e) {
+        } catch (Throwable e) {
             fail(e.getMessage());
         }
 
@@ -402,7 +402,7 @@ public class SignificantDateTest extends TestifierTest{
         long days = 0;
         try {
             days = (long) Invoker.invokeStatic(SignificantDate.class, "daysTo", date);
-        } catch (CannotInvokeMethodException | CannotFindMethodException | CannotAccessMethodException e) {
+        } catch (Throwable e) {
             fail(e.getMessage());
         }
 
@@ -421,7 +421,7 @@ public class SignificantDateTest extends TestifierTest{
         LocalDate next = null;
         try {
             next = (LocalDate) Invoker.invokeStatic(SignificantDate.class, "next", tomorrow);
-        } catch (CannotInvokeMethodException | CannotFindMethodException | CannotAccessMethodException e) {
+        } catch (Throwable e) {
             fail(e.getMessage());
         }
 
@@ -439,7 +439,7 @@ public class SignificantDateTest extends TestifierTest{
         long days = 0;
         try {
             days = (long) Invoker.invokeStatic(SignificantDate.class, "daysTo", tomorrow);
-        } catch (CannotInvokeMethodException | CannotFindMethodException | CannotAccessMethodException e) {
+        } catch (Throwable e) {
             fail(e.getMessage());
         }
 
