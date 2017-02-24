@@ -16,8 +16,11 @@ public class Main {
         /*
             In this main() method you should make use of your SignificantDate
             class. Use the next() method to find and print the next instance of
-            and number of days until leap year, of the other holiday constants
-            we defined in SignificantDate and another arbitrary date.
+            and number of days to three dates:
+
+            - One of the holiday constants defined in SignificantDate (not Leap Year)
+            - Leap Year
+            - Any other arbitrary date
 
             Here is some valid example output:
 
