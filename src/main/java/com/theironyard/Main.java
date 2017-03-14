@@ -1,5 +1,9 @@
 package com.theironyard;
 
+import java.time.Month;
+import java.time.MonthDay;
+import java.time.format.DateTimeFormatter;
+
 /**
  * For this exercise you will be creating a new class, SignificantDate, that can
  * be used to calculate the days until a given date (such as Valentine's Day,
@@ -51,19 +55,43 @@ public class Main {
             https://docs.oracle.com/javase/8/docs/api/java/time/format/DateTimeFormatter.html#format-java.time.temporal.TemporalAccessor-
 
          */
-
+        String format;
         // todo: create a new DateTimeFormatter in a variable named formatter
+        DateTimeFormatter formatter =  DateTimeFormatter.ofPattern("M/d/y");
 
-
+            format = SignificantDate.next(SignificantDate.NEW_YEARS_DAY).format(formatter);
         // todo: print the number of days to and the date of the next occurrence of a constant date defined in SignificantDate (other than leap year). EG: Valentines Day
 
-
+        //SignificantDate.next(SignificantDate.NEW_YEARS_DAY).format(formatter);
+        System.out.printf("There are %s days until the next occurrence of New Years on %s%n",
+                SignificantDate.daysTo(SignificantDate.NEW_YEARS_DAY),formatter.format(SignificantDate.next(SignificantDate.NEW_YEARS_DAY)));
         // todo: print the number of days to and date of the next occurrence of leap year
 
+        System.out.printf("There are %s days until the next occurrence of Leap Year on %s%n",
+                SignificantDate.daysTo(SignificantDate.LEAP_YEAR),formatter.format(SignificantDate.next(SignificantDate.LEAP_YEAR)));
 
         // todo: print the number of days to and date of any arbitrary MonthDate that is not defined as a constant in SignificantDate. EG: your birthday
+        //System.out.printf(SignificantDate.next(MonthDay.of(Month.MARCH,7)).format(formatter));
 
-
+        System.out.printf("There are %s days until the next occurrence of Your Birthday on %s%n",
+                SignificantDate.daysTo(MonthDay.of(Month.MARCH,7)),formatter.format(SignificantDate.next(MonthDay.of(Month.MARCH,7))));
+///////////
+        //SignificantDate.next(SignificantDate.NEW_YEARS_DAY).format(formatter);
+//        System.out.println("There are "+ SignificantDate.daysTo(SignificantDate.NEW_YEARS_DAY)+" days until the next occurrence of New Years on "+
+//               format);
+//
+//        // todo: print the number of days to and date of the next occurrence of leap year
+//
+//        format =SignificantDate.next(SignificantDate.LEAP_YEAR).format(formatter);
+//
+//        System.out.println("There are "+ SignificantDate.daysTo(SignificantDate.LEAP_YEAR)+" days until the next occurrence of Leap Year on "+ format
+//                );
+//        // todo: print the number of days to and date of any arbitrary MonthDate that is not defined as a constant in SignificantDate. EG: your birthday
+//
+//        format = SignificantDate.next(MonthDay.of(Month.MARCH,7)).format(formatter);
+//
+//        System.out.println("There are "+ SignificantDate.daysTo(MonthDay.of(Month.MARCH,7))+" days until the next occurrence of Birthday on "+
+//               format );
     }
 
 }
